@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Entry from './Entry'
+import ToDoList from './ToDoList'
+import styled from 'styled-components/macro'
 
 function App() {
+  const [todos, setTodos] = useState([])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Content className="App">
+      <Header>
+        <h1>To Do's</h1>
+      </Header>
+      <Entry onCreateTodo={addTodo} />
+      <ToDoList todos={todos} />
+    </Content>
+  )
+
+  function addTodo(todo) {
+    setTodos([...todos, todo])
+  }
 }
 
-export default App;
+const Content = styled.div`
+  text-align: center;
+`
+const Header = styled.header`
+  background-color: papayawhip;
+`
+
+export default App
