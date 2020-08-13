@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonOk from './ButtonOk'
+import ButtonAdd from './ButtonAdd'
 import styled from 'styled-components/macro'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -8,7 +8,7 @@ export default function ToDoForm({ onCreateTodo }) {
     <Form onSubmit={handleSubmit}>
       <FormLabel htmlFor="todo-input">Add todo:</FormLabel>
       <input id="todo-input" name="todo" />
-      <ButtonOk />
+      <ButtonAdd />
     </Form>
   )
 

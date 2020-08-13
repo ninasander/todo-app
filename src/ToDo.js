@@ -1,14 +1,14 @@
 import React from 'react'
 import Checkbox from './Checkbox'
-import ButtonCancel from './ButtonCancel'
 import styled from 'styled-components/macro'
+import ButtonRemove from './ButtonRemove'
 
 export default function ToDo({ text, completed, onDelete }) {
   return (
     <div>
       <Checkbox completed={completed} />
       <ToDoText>{text}</ToDoText>
-      <ButtonCancel onDelete={onDelete} />
+      <ButtonRemove onDelete={onDelete} />
     </div>
   )
 }

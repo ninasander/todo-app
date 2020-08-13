@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-export default function ButtonOk() {
-  return <OkButton className="ButtonOk">Add</OkButton>
+export default function ButtonAdd() {
+  return <AddButton>Add</AddButton>
 }
 
-const OkButton = styled.button`
+const AddButton = styled.button`
   background-color: green;
   font-weight: 600;
   color: white;
