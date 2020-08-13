@@ -12,7 +12,11 @@ export default function ToDo({ text, completed, onDelete }) {
     </div>
   )
 }
-
+// ToDo.defaultProps = {
+//   text: 'Example ToDo',
+//   completed: false,
+//   onDelete: undefined,
+// }
 const ToDoText = styled.span`
   margin-left: 4px;
 `
