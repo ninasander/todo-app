@@ -2,12 +2,12 @@ import React from 'react'
 import Checkbox from './Checkbox'
 import ButtonCancel from './ButtonCancel'
 
-export default function ToDo({ text, completed }) {
+export default function ToDo({ text, completed, onDelete }) {
   return (
     <div>
       <Checkbox completed={completed} />
       {text}
-      <ButtonCancel />
+      <ButtonCancel onDelete={onDelete} />
     </div>
   )
 }

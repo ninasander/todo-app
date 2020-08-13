@@ -1,8 +1,12 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-export default function ButtonCancel() {
-  return <CancelButton className="ButtonCancel">X Remove</CancelButton>
+export default function ButtonCancel({ onDelete }) {
+  return (
+    <CancelButton onClick={onDelete} className="ButtonCancel">
+      X Remove
+    </CancelButton>
+  )
 }
 
 const CancelButton = styled.button`
