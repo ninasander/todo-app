@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Entry from './Entry'
+import Entry from './ToDoForm'
 import ToDoList from './ToDoList'
 import styled from 'styled-components/macro'
 
@@ -28,6 +28,12 @@ const Content = styled.div`
 `
 const Header = styled.header`
   background-color: papayawhip;
+  color: cornflowerblue;
+
+  h1 {
+    margin: 0;
+    padding: 10px;
+  }
 `
 
 export default App

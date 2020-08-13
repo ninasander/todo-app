@@ -3,7 +3,7 @@ import ButtonOk from './ButtonOk'
 import styled from 'styled-components/macro'
 import { v4 as uuidv4 } from 'uuid'
 
-export default function Entry({ onCreateTodo }) {
+export default function ToDoForm({ onCreateTodo }) {
   return (
     <form onSubmit={handleSubmit}>
       <FormLabel htmlFor="todo-input">Add todo:</FormLabel>
