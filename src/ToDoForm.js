@@ -5,11 +5,11 @@ import { v4 as uuidv4 } from 'uuid'
 
 export default function ToDoForm({ onCreateTodo }) {
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <FormLabel htmlFor="todo-input">Add todo:</FormLabel>
       <input id="todo-input" name="todo" />
       <ButtonOk />
-    </form>
+    </Form>
   )
 
   function handleSubmit(event) {
@@ -21,6 +21,10 @@ export default function ToDoForm({ onCreateTodo }) {
     input.focus()
   }
 }
+
+const Form = styled.form`
+  margin: 10px;
+`
 
 const FormLabel = styled.label`
   margin-right: 8px;
